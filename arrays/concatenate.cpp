@@ -24,9 +24,7 @@ int main(int argc, char* argv[]) {
   //c++ style
   std::vector<int> v1 {1, 2, 3};
   std::vector<int> v2 {1, 2, 5};
-  std::vector<int> v1v2;
-  v1v2.reserve(v1.size() + v2.size());
-  v1v2.insert(v1v2.end(), v1.begin(), v1.end());
+  std::vector<int> v1v2 = v1;
   v1v2.insert(v1v2.end(), v2.begin(), v2.end());
 
   for (auto element: v1v2) {
